@@ -12,4 +12,4 @@ The game uses the Pygame module (which could be downloaded here https://www.pyga
 
 ## Download
 
-The .exe file is included in the repository, it is titled "Simple_Maze_Game.exe". So you can either clone the repository and run the .exe or go to releases and download the setup.exe which downloads the repository files.
+The .exe file is included in the repository, it is titled "Simple_Maze_Game.exe". You can either clone the repository and run the .exe or go to releases and download the setup.exe which downloads the repository files.
