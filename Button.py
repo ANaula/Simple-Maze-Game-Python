@@ -1,5 +1,7 @@
 import pygame
 
+# Simple button class that checks whenever the mouse is hover over a button and when the mouse clicks on a button.
+
 
 class Button:
     def __init__(self, window, x, y, width, height, text="", outline_color=None):

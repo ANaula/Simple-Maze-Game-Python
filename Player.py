@@ -1,5 +1,8 @@
 import pygame
 
+# User controlled object class. Checks to see for user input and resets its position if it collided with an obstacle.
+# Inherited from the Sprite class in order to make updating, displaying, and checking for collision easier.
+
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y, screen):

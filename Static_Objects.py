@@ -1,5 +1,8 @@
 import pygame
 
+# The non-moving obstacle class. It inherits from the sprite class to make updating, displaying, and collision checking
+# easier.
+
 
 class Static_Objects(pygame.sprite.Sprite):
     def __init__(self, x, y, width, height):

@@ -1,4 +1,9 @@
 import pygame
+# The moving obstacle class. It inherits from the sprite class to make updating, displaying, and collision checking
+# easier. It also moves with the direction depending on what was specified when constructed. One of the parameters for
+# creating this object is a static objects sprite group. This is because we check for collision between each moving
+# object and the static objects as well as the window borders. If collision is detected the direction
+# of the moving object switches to the opposite.
 
 
 class Moving_Objects(pygame.sprite.Sprite):

@@ -6,8 +6,12 @@ from Button import Button
 from Player import Player
 from sys import exit
 
+# This class has their member functions act as different game states and each have their own loop which updates and
+# renders objects and updates the display.The member "type" variable controls which state is being run and the
+# "state manager" function interprets the variable and calls the appropriate member function.
 
-class States():
+
+class States:
     def __init__(self, window):
         self.type = "Main_Menu"
         self.window = window
@@ -16,6 +20,13 @@ class States():
         self.game_level = 0
 
     def game_state(self):
+        # The game state is a special case because, since we have three levels, we need a way for the state to display
+        # each level separately one after the other.This is done by separating the game state further into three parts
+        # controlled by the "level manager" function and the game_level member variable. Once a collision is detected
+        # between the player and the light green goal object, the game_level is incremented by one and the level
+        # associated with the game_level value is run. Each level has their own loop and their own different
+        # assortment of objects to update and display.
+
         background_surface = pygame.Surface((self.window.get_width(), self.window.get_height()))
         background_surface.fill((173, 216, 230))
         static_objects = pygame.sprite.Group()
@@ -199,6 +210,8 @@ class States():
                 end_text_rect = end_text_surface.get_rect(center=(self.window.get_width()/2, self.window.get_height()/2-50))
                 sub_end_text_surface = self.small_text_font.render("You have passed all the levels!", False, (0, 0, 0))
                 sub_end_text_rect = sub_end_text_surface.get_rect(center=(self.window.get_width()/2, self.window.get_height()/2+50))
+
+                # Here, we display a short level screen before every level.
 
                 while time < 60 * 5:
                     self.window.blit(next_surface, (0, 0))
